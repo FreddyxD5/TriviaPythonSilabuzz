@@ -1,3 +1,5 @@
+import random
+import time
 BLACK = '\033[30m'
 RED = '\033[31m'
 GREEN = '\033[32m'
@@ -7,8 +9,7 @@ MAGENTA = '\033[35m'
 CYAN = '\033[36m'
 WHITE = '\033[37m'
 RESET = '\033[39m'
-import random
-import time
+
 
 preguntas = [
         'Hay cuatro pares de frutas del diablo y sus propietarios a continuación. ¿Qué par esincorrecto?',
