@@ -158,8 +158,7 @@ while play:
         if len(choices[pregunta]) - 1 == 2:
             for choice in range(len(choices[pregunta]) - 1):
                 print(GREEN + choices[pregunta][choice] + RESET)
-
-                time.sleep(0.4)
+                
 
             print('esta pregunta es de 2 opciones')
             respuesta = input('Escriba "V" para verdadero o "F" para Falso: ')
@@ -181,8 +180,7 @@ while play:
         elif len(choices[pregunta]) - 1 == 5:
             for choice in range(len(choices[pregunta]) - 2):
                 print(GREEN + choices[pregunta][choice] + RESET)
-
-                time.sleep(0.4)
+                
 
             respuesta = input('Escriba la alternativa correcta : ')
             while respuesta.lower() not in ['a', 'b', 'c', 'd', 'x']:
@@ -207,8 +205,7 @@ while play:
 
         else:
             for choice in range(len(choices[pregunta]) - 1):
-                print(GREEN + choices[pregunta][choice] + RESET)
-                time.sleep(0.4)
+                print(GREEN + choices[pregunta][choice] + RESET)                
 
             respuesta = input('Escriba la alternativa correcta : ')
             while respuesta.lower() not in ['a', 'b', 'c', 'd']:
