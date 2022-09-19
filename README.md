@@ -1,11 +1,14 @@
-# Trivia de One Piece 
+# :womans_hat:Trivia de One Piece :womans_hat:
+ Esta trivia mide tu :brain: conocimiento  :brain: sobre el Anime de One Piece
 
-## Esta trivia mide tu conocimiento sobre One Piece 
+## Demo
+Puedes probar la demo haciendo click aquí [Demo](https://replit.com/@JesusMore1/SilabuzzTrivia)
 
-Puedes probar la demo haciendo click aquí [Demo](https://replit.com/@JesusMore1/Trivia-Silabuz)
+- Solo tienes que darle click al boton verde con nombre RUN y ya deberia de estar funcionando.
 
-
-One Piece
 
 # Licencia
 MIT
+
+# 
+Made with python :sparkling_heart: to silabuz.com
