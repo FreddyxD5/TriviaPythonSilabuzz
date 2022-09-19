@@ -12,6 +12,9 @@ CYAN = '\033[36m'
 WHITE = '\033[37m'
 RESET = '\033[39m'
 
+#DATA 
+# Preguntas de la trivia principal, incluyendo las que presentan
+# alternativas ocultas
 preguntas = [
     'Hay cuatro pares de frutas del diablo y sus propietarios a continuación. ¿Qué par es incorrecto?',
     '“Cicatriz con forma de rayo”, “criatura”, y “sandalias tradicionales japonesas”. ¿A qué personaje se refiere esta descripción?',
@@ -35,6 +38,7 @@ preguntas = [
     '¿Qué nivel de Impel Down (Gran Prisión Submarina) está nombrada incorrectamente?'
 ]
 
+#Opciones de respuesta a las preguntas del la trivia principal
 choices = [
     [
         'a) Yuki Yuki no Mi(Fruta Nieve Nieve) y Monet',
@@ -87,11 +91,15 @@ choices = [
     ]
 ]
 
+# Preguntas extras en caso de que el usuario haya entrado al rango 
+# que se ha especificado para cierto puntaje.
 pregunta_extras = [
     '¿Cuántos años le dieron a Tom para construir el tren marino de Water 7?',
     '¿Cómo se llama la Isla en donde se encuentra el castillo de Mihawk?',
     '¿Cuál es el nombre de la fruta de Caribou?'
 ]
+# Opciones extras a la trivia extra en caso de que el usuario
+# haya entrado en el rango especificado para cierto puntaje. 
 
 respuestas_extras = [['a) 5 Años', 'b) 1 Año', 'c) 10 Años', 'd) 7 Años', 'c'],
                      [
@@ -103,6 +111,10 @@ respuestas_extras = [['a) 5 Años', 'b) 1 Año', 'c) 10 Años', 'd) 7 Años', 'c
                          'c) Boru Boru no mi', 'd) Nagi Nagi no mi', 'b'
                      ]]
 
+
+#Funcion que permite darle un mensaje
+# dependiendo de el promedio que el usuario realizo en cada uno 
+# de sus intentos en la trivia 
 
 def avg_nakama(scores):
     prom = sum(scores) / len(scores)
@@ -119,12 +131,16 @@ def avg_nakama(scores):
               ' que tengas un buen viaje y encuentres el ONE PIECE')
 
 
+#Puntaje con el que se inicia la trivia.
 puntaje = random.randint(3, 12)
 play = True
 print(CYAN + '-=BIENVENIDO NAKAMA=-' + RESET)
 time.sleep(0.8)
 nombre = input(CYAN + 'Cual es tu nombre?\n' + RESET)
 index = 0
+
+# Lista de enteros que contendran el puntaje final de cada intento en la trivia 
+# que haya hecho el usuario.
 scores = []
 while play:
 
@@ -299,10 +315,13 @@ while play:
         print()
 
         time.sleep(1)
+
 score = ''
+
 for item in scores:
     score += '| ' + str(item) + " "
 score += ' |'
+
 print(nombre + ' obtuviste unos puntajes de :')
 print(score)
 if len(scores) >= 2:
